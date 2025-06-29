@@ -55,7 +55,7 @@ export default function KeyList({ passwords }: { passwords: Password[] }) {
 
   return (
     <>
-      <Card>
+      <Card className="border-primary/70">
         <CardHeader>
           <CardTitle>List Of Keys</CardTitle>
         </CardHeader>
@@ -68,7 +68,7 @@ export default function KeyList({ passwords }: { passwords: Password[] }) {
                   onCancel={() => setEditingId(null)}
                 />
               ) : (
-                <Card className="p-5 border-primary/30">
+                <Card className="p-5 border-primary/60">
                   <div className="flex items-center justify-between p-3 border rounded-md w-full">
                     {password.category && (
                       <Badge
@@ -90,6 +90,7 @@ export default function KeyList({ passwords }: { passwords: Password[] }) {
                       <Button
                         size="icon"
                         onClick={() => handleDelete(password._id)}
+                        className="text-white"
                       >
                         <FiTrash2 />
                       </Button>
@@ -139,7 +140,7 @@ export default function KeyList({ passwords }: { passwords: Password[] }) {
                             href={password.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-indigo-600 hover:underline flex items-center"
+                            className="text-primary hover:underline flex items-center"
                           >
                             {password.url}
                           </Link>

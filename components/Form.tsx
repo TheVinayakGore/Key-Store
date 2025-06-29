@@ -43,7 +43,7 @@ export default function Form() {
 
   return (
     <>
-      <Card>
+      <Card id="try-now" className="border-primary/70">
         <CardHeader>
           <CardTitle>Add New Credential</CardTitle>
         </CardHeader>
